@@ -1,0 +1,429 @@
+html, body, main {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/*************** フォント ***************/
+@font-face {
+
+}
+
+body {
+  font-family: Helvetica,'Meiryo UI','Meiryo','Hiragino Maru Gothic Pro',verdana,arial,sans-serif;
+}
+
+/*************** 文字 ***************/
+h1 {
+  color: #666;
+  font-size: 12em;
+  font-weight: lighter;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  color: #666;
+  font-size: 2em;
+  font-weight: lighter;
+  letter-spacing: 0.3em;
+  margin: 0 auto 50px;
+  text-align: center;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  color: #444;
+  font-size: 1.1em;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  line-height: 2em;
+  margin: 0;
+}
+
+h4 {
+  color: #666;
+  font-size: 1.3em;
+  font-weight: lighter;
+  letter-spacing: 3px;
+  line-height: 200%;
+  text-align: center;
+}
+
+h5 {
+  color: #444;
+  font-size: 14px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  line-height: 1.2em;
+}
+
+p {
+  color: #666;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+a {
+  color: rgba(255, 0, 0, 0.7);
+  display: inline-block;
+  letter-spacing: 3px;
+  text-shadow: .5px .5px .5px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+
+img {
+  width: 100%;
+}
+
+.line {
+  width: 92%;
+}
+
+
+/* スクリーンワイド 768px以下 iPad等 */
+/* スクリーンワイド 480px以下 iPhoneランドスケープ 等 */
+@media screen and (max-width: 768px) {
+  a:hover {
+    filter:alpha(opacity=80);
+    opacity:0.8;
+  }
+
+  a:hoverRemove {
+    filter:alpha(opacity=100);
+    opacity:1;
+  }
+
+}
+
+/* スクリーンワイド 768px以下 iPad等 */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  h2,
+  h3 {
+    font-size: 12px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5,
+  p {
+    font-size: 9px;
+  }
+}
+
+/* スクリーンワイド 480px以下 iPhoneランドスケープ 等 */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  h2,
+  h3 {
+    font-size: 1em;
+    letter-spacing: 0;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5,
+  p {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+/************ 固定背景 ************/
+.fixed-bg {
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.fixed-bg.bg-top {
+  background-color: rgba(0,0,0,0.1);
+/*
+  background-image: url('../img/img-top-1.jpg');
+*/
+  color: #000000;
+}
+
+.fixed-bg_smp {
+  display: none;
+}
+
+.top-img {
+  min-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.top-logo {
+  width: 20%;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  right: 40%;
+  bottom: 45%;
+}
+
+/*************** メニュー ***************/
+.top-menu {
+  width: 200px;
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.top-menu li {
+  width: 100%;
+  height: 20px;
+  margin: 0;
+}
+
+.top-menu a {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0) 50%, rgba(255, 0, 0, 0.7) 50%);
+  background-position: 0 0;
+  background-size: 200% auto;
+  color: #111;
+  transition: .3s;
+  padding: .3em;
+}
+
+.top-menu a:hover {
+  color: #fff;
+  background-position: -100% 0;
+  width: 190px;
+}
+
+.nav {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: solid 2px red;
+  margin: 0;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
+.fixed-menu {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+}
+
+.fixed-menu li {
+  width: 150px;
+  float: left;
+  text-align: center;
+  padding: 25px 0 0 0;
+}
+
+.fixed-menu a {
+  color: #111;
+}
+
+.fixed-menu-logo {
+  width: 120px;
+  float: left;
+  padding: 5px 0 0 15px;
+  margin-right: 20px;
+}
+
+@keyframes vertical {
+    0% { transform: translatey( -20px); }
+  100% { transform: translatey( 0px); }
+}
+
+.arrow-down {
+  width: 50px;
+  animation: vertical 0.8s ease-in-out infinite alternate;
+  position: absolute;
+  bottom: 5%;
+  left: 47.5%;
+  right: 47.5%;
+}
+
+.arrow-down img {
+  width: 100%;
+}
+
+/* スクリーンワイド 768px以下 */
+@media screen and (max-width: 768px) {
+  .fixed-bg {
+    display: none;
+  }
+
+  .fixed-bg_smp {
+    display: block;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100%;
+    max-width: 100%;
+  }
+
+  .top-menu {
+    width: 50%;
+    top: 10%;
+    margin-left: -10px;
+  }
+}
+
+/*************** TOP画面 ***************/
+main {
+  width: 100%;
+}
+
+.about {
+  margin: 0 auto 100px;
+  width: 100%;
+}
+
+.contents {
+  margin: 36px 100px 80px;
+}
+
+.flex_65 {
+  width: 64%;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.flex_50 {
+  width: 49%;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.flex_35 {
+  width: 34%;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.flex_two {
+  display: flex;
+  margin: 62px 100px 80px;
+}
+
+.m-left {
+  margin-left: 50px;
+}
+
+.info {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.info-top {
+  width: 80%;
+  margin: 40px auto 0;
+}
+
+.info-top:first-letter,
+.info h3:first-letter {
+  color: #fff;
+  background-color: #ff3300;
+  font-size: 3em;
+  float: left;
+  line-height: 1;
+  margin: 0 10px 0 0;
+  padding: .2em .25em .2em .18em;
+  width: 48px;
+  height: 48px;
+}
+
+/* スクリーンワイド 768px以下 iPad等 */
+@media screen and (max-width: 768px) {
+  .top2,
+  .about,
+  .contents {
+    margin: 0 auto;
+  }
+
+  .flex_two {
+    display: inline;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .m-left {
+    margin-left: 0;
+  }
+
+  .info {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .contents,
+  .flex_65,
+  .flex_50,
+  .flex_35,
+  .info,
+  .info-top {
+    width: 90%;
+    margin: 0 auto;
+    font-feature-settings: "palt";
+  }
+}
+
+
+/*************** フッター ***************/
+footer {
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* スクリーンワイド 768px以下 iPad等 */
+/* スクリーンワイド 480px以下 iPhoneランドスケープ 等 */
+@media screen and (max-width: 768px) {
+  footer {
+    clear: both;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .footer {
+    font-size: 6px;
+  }
+}
